@@ -29,7 +29,7 @@ def get_system_time(format: str = "%Y-%m-%d %H:%M:%S"):
 
 tools = [search_tool, get_system_time]
 
-agent= initialize_agent(llm=llm, tools=tools, agent="zero-shot-react-description", verbose= True)
+agent= initialize_agent(llm=llm, tools=tools, agent="zero-shot-react-description", verbose= True, handle_parsing_errors=True)
 
 agent.invoke("When was the last visit of the president of the united states to germany and howmany days was it ago")
 
